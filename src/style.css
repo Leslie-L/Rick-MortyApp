@@ -16,17 +16,74 @@
 body{
   width: 100%;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(var(--green),var(--black));;
+  background: linear-gradient(var(--green),var(--black));
+  
 }
-.logo {
-  height: 6rem;
-  padding: 1.5rem;
+main{
+  width: 100%;
+  height: 100%;
+  
+}
+
+header{
+  background: var(--black);
+  width: 100%;
+  height: 100px;
+}
+.header-inner{
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+.header-logo{
+  width: 200px;
+  height: 40px;
   will-change: filter;
   transition: filter 300ms;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2rem #646cffaa);
+.header-form{
+  display: flex;
+  font-size: 2rem;
+}
+.header-form input{
+  height: 30px;
+  border: none;
+  border-bottom-left-radius:4px;
+  border-top-left-radius:4px;
+  background: var(--yellow);
+  padding: 4px;
+}
+.header-form button{
+  
+  height: 30px;
+  border: none;
+  padding: 4px;
+  border-bottom-right-radius:4px;
+  border-top-right-radius:4px;
+  background-color: var(--blue);
+}
+.header-form button:hover{
+  background-color: var(--green);
+}
+.header-logo:hover {
+  filter: drop-shadow(0 0 2rem var(--blue));
+}
+.container{
+  width: 100%;
+ 
+  
+}
+@media only screen and (min-width: 600px) {
+  header{
+    height: 50px;
+  }
+  .header-inner{
+    flex-direction: row;
+    justify-content:  space-between;
+  }
 }
