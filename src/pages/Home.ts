@@ -18,6 +18,10 @@ async function  actionAdd() {
         }
         if(data.next){
             next  = data.next
+        }else{
+            const bnt = document.querySelector('footer');
+            if(bnt)
+            bnt.innerHTML=''
         }
     }  
     
