@@ -84,7 +84,62 @@ header{
 .characters img{
   width: 100%;
   height: 300px;
+  transition: scale 300ms ease-in;
 }
+.characters img:hover{
+  scale: 1.2;
+}
+.character{
+  margin-top: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.character-card{
+  width: 100%;
+  height: auto;
+}
+.character-img img{
+  border-radius: 10px;
+}
+.character-card__container{
+  margin-top: 10px;
+  width: 100%;
+  height: 70vh;
+  font-size: 4rem;
+  background-color: var(--black);
+  color: var(--white);
+}
+.character-card__container b{ 
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--blue);
+}
+.character-card__container h2{ 
+  font-size: 2.5rem;
+  font-weight:500;
+  color: var(--blue);
+  text-align: center;
+  padding: 15px;
+}
+.character-card__container h3{
+  padding: 10px;
+}
+.button-more{
+  width: 100%;
+  height: 40px;
+  background-color: var(--black);
+  color: var(--blue);
+  font-size: 2rem;
+}
+.button-more:hover{
+  color: var(--black);
+  background-color: var(--blue);
+}
+
 @media only screen and (min-width: 600px) {
   header{
     height: 50px;
@@ -95,5 +150,29 @@ header{
   }
   .characters{
     grid-template-columns:repeat(5, minmax(100px, 1fr))   ;
+  }
+  .character{
+    flex-direction: row;
+  }
+  .character-img, .character-card{
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .character-card__container{
+    width: 80%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .character-card__info{
+    text-align: left;
   }
 }
