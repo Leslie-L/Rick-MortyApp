@@ -1,4 +1,4 @@
-import { Result,Res } from "../interfaces/data";
+import { Result} from "../interfaces/data";
 import ButtonMore from "../templates/ButtonMore";
 import getCharacterByQuery from "../utils/getCharactersByQuery";
 import getHash from "../utils/getHash";
