@@ -1,10 +1,16 @@
+import imgUrl from '../images/404.png';
 const NotFound = ()=>{
+    const footer = document.querySelector('footer')
+    if(footer){
+        if(!footer.classList.contains('hidden'))
+            footer.classList.add('hidden')
+    }
     const res = `
         <div class="notFound">
              <h1>404 Not Found</h1>
             <div class="notFound-container">
                 <section class="notFound-image">
-                    <img src="../images/404.png" />
+                    <img src="${imgUrl}" />
                 </section>
                 <section class="notFound-info">
                     <p>

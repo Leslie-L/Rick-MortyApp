@@ -3,6 +3,11 @@ import getCharaterById from "../utils/getCharacterById";
 import getHash from "../utils/getHash";
 
 const Character = async ()=>{
+    const footer = document.querySelector('footer')
+    if(footer){
+        if(!footer.classList.contains('hidden'))
+            footer.classList.add('hidden')
+    }
     const id = getHash()
     const info = await getCharaterById(id);
     if(info &&  typeof info !== 'string'){
