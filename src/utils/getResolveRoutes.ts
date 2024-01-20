@@ -3,6 +3,9 @@ const getResolveRoutes = (route:string)=>{
         const valid = route==='/' || route===''? '/':'/:id'
         return valid
     }
+    if(route.startsWith('search')){
+        return '/search'
+    }
     return "/"+route;
 }
 export default getResolveRoutes;

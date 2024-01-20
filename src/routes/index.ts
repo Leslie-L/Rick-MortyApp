@@ -1,15 +1,16 @@
 import Header from "../templates/Header";
-import ButtonMore from "../templates/ButtonMore";
 import Character from "../pages/Character";
 import Home from "../pages/Home";
 import NotFound from "../pages/NotFound";
 import getHash from "../utils/getHash";
 import getResolveRoutes from "../utils/getResolveRoutes";
+import Search from "../pages/Search";
 
 
 const routes:{[index: string]: ()=>string}={
     "/": Home,
     "/:id":Character,
+    "/search":Search,
 }
 const route =async ()=>{
     const header = null || document.querySelector('header');

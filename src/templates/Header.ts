@@ -6,7 +6,7 @@ const Header = ()=>{
                 <img class="header-logo" src="${imgUrl}"/>
             </a>
             <form class="header-form">
-                <input type="search" placeholder="Search a character" />
+                <input type="search" placeholder="Search a character" name="search" required/>
                 <button type="submit">Search 🔍</button>
             </form>
         </div>
