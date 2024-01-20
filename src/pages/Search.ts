@@ -47,7 +47,9 @@ const Search= async()=>{
             controlFooter();
         }
         res = `
+        <h1 class="query"> Search 🔍: ${query}</h1>
         <div class="characters">
+            
             ${addMore(result)}
         </div>
         `;
