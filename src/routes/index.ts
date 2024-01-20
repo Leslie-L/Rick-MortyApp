@@ -7,7 +7,7 @@ import getResolveRoutes from "../utils/getResolveRoutes";
 import Search from "../pages/Search";
 
 
-const routes:{[index: string]: ()=>string}={
+const routes:{[index: string]: ()=>Promise<string>}={
     "/": Home,
     "/:id":Character,
     "/search":Search,
